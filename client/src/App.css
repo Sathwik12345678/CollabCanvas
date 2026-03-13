@@ -1,0 +1,5 @@
+/* App-level overrides - keep #root full bleed for CollabCanvas */
+#root {
+  width: 100%;
+  min-height: 100%;
+}

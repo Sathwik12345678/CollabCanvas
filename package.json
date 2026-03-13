@@ -1,0 +1,18 @@
+{
+  "name": "collabcanvas",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CollabCanvas - client + server runner",
+  "scripts": {
+    "setup": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c green,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "start": "npm --prefix server run start",
+    "server:start": "npm --prefix server run start",
+    "server:dev": "npm --prefix server run dev",
+    "lint": "npm --prefix client run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
+

@@ -1,0 +1,128 @@
+/* =========================
+   Glass System
+========================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  transition: all 0.25s ease;
+}
+
+/* Only lift on explicit .glass-lift to avoid shifting full-screen panels */
+.glass.glass-lift:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   Cards
+========================= */
+
+.card-premium {
+  border-radius: 18px;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   Inputs
+========================= */
+
+.input-premium {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.input-premium::placeholder {
+  color: #94a3b8;
+}
+
+.input-premium:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.btn-premium {
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+}
+
+.btn-premium:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.45);
+}
+
+.btn-premium:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================
+   Layout Utilities
+========================= */
+
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-premium {
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+
+/* =========================
+   Glow Backgrounds
+========================= */
+
+.bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.bg-glow-indigo {
+  background: #6366f1;
+}
+
+.bg-glow-purple {
+  background: #9333ea;
+}
